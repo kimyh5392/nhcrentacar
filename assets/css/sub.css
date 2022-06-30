@@ -1,0 +1,528 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url("/assets/css/font.css");
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, etails, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  font-family: inherit; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  font-size: 10px;
+  color: #5f5f5f;
+  font-weight: 700;
+  font-family: 'Noto Sans KR', sans-serif;
+  padding-top: 50px;
+  padding-bottom: 85px;
+  letter-spacing: -.5px;
+  word-break: keep-all;
+  box-sizing: border-box; }
+  body *, body *::before, body *::after {
+    box-sizing: border-box; }
+  @media (min-width: 1024px) {
+    body {
+      padding-top: 70px;
+      padding-bottom: 0; } }
+
+.container {
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 10px;
+  margin: 0 auto; }
+  @media (min-width: 1024px) {
+    .container {
+      padding: 0 25px; } }
+
+.container-fluid {
+  display: block;
+  width: 100%;
+  padding: 0 10px; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0; }
+
+hr {
+  display: block;
+  border: 0;
+  margin: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+input, select, textarea {
+  font-family: inherit;
+  outline: none !important; }
+
+a, button {
+  color: #5f5f5f;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  background: none; }
+  a:hover, button:hover {
+    color: #5f5f5f; }
+
+/*select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    background-image: url();
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px) 50%;
+    background-size: auto;
+    &::-ms-expand {
+        display: none;
+    }
+}*/
+/* common */
+#content {
+  padding: 50px 0 100px; }
+  @media (min-width: 1024px) {
+    #content {
+      padding: 100px 0 200px; } }
+
+.page-path {
+  font-size: 0;
+  padding-bottom: 20px; }
+  .page-path > ol > li {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 10px;
+    color: #444;
+    font-weight: 400; }
+    .page-path > ol > li > a {
+      display: inline-block;
+      vertical-align: top;
+      color: #444; }
+    .page-path > ol > li:after {
+      display: inline-block;
+      vertical-align: top;
+      content: '>';
+      margin: 0 5px; }
+    .page-path > ol > li:last-child:after {
+      display: none; }
+  @media (min-width: 1024px) {
+    .page-path {
+      padding-bottom: 40px; }
+      .page-path > ol > li {
+        font-size: 16px; }
+        .page-path > ol > li:after {
+          margin: 0 10px; } }
+
+/* introduce */
+.introduce figure img {
+  display: block;
+  width: 100%; }
+.introduce .section-content {
+  text-align: center; }
+  .introduce .section-content h3 {
+    font-size: 16px;
+    color: #222;
+    line-height: 20px;
+    font-weight: bold; }
+    .introduce .section-content h3 span {
+      color: #f68b1e; }
+  .introduce .section-content p {
+    font-size: 12px;
+    line-height: 16px;
+    color: #444; }
+  .introduce .section-content .summary {
+    padding: 25px 0 35px;
+    border-bottom: 1px solid #a3a3a3; }
+    .introduce .section-content .summary br {
+      display: none; }
+      .introduce .section-content .summary br.d-block {
+        display: block; }
+    .introduce .section-content .summary p {
+      margin-top: 15px; }
+  .introduce .section-content .excuse {
+    padding-top: 30px; }
+    .introduce .section-content .excuse p {
+      margin-top: 5px; }
+    .introduce .section-content .excuse .excuse-list {
+      margin-top: 25px;
+      padding: 0 25px; }
+      .introduce .section-content .excuse .excuse-list > ul {
+        overflow: hidden;
+        border: 1px solid #a3a3a3; }
+        .introduce .section-content .excuse .excuse-list > ul > li {
+          float: left;
+          width: 50%; }
+          .introduce .section-content .excuse .excuse-list > ul > li > figure {
+            padding: 20px 0; }
+            .introduce .section-content .excuse .excuse-list > ul > li > figure img {
+              width: 59px;
+              margin: 0 auto; }
+            .introduce .section-content .excuse .excuse-list > ul > li > figure figcaption {
+              font-size: 12px;
+              line-height: 16px;
+              color: #f68b1e;
+              font-weight: bold;
+              margin-top: 10px; }
+              .introduce .section-content .excuse .excuse-list > ul > li > figure figcaption.space {
+                padding: 8px 0; }
+          .introduce .section-content .excuse .excuse-list > ul > li:nth-of-type(2n + 1) {
+            clear: left;
+            border-right: 1px solid #a3a3a3; }
+          .introduce .section-content .excuse .excuse-list > ul > li:nth-of-type(2) ~ li {
+            border-top: 1px solid #a3a3a3; }
+@media (min-width: 1024px) {
+  .introduce .section-content h3 {
+    font-size: 32px;
+    line-height: 40px; }
+  .introduce .section-content p {
+    font-size: 24px;
+    line-height: 38px; }
+  .introduce .section-content .summary {
+    padding: 55px 0 65px; }
+    .introduce .section-content .summary br {
+      display: block; }
+    .introduce .section-content .summary p {
+      margin-top: 30px; }
+  .introduce .section-content .excuse {
+    padding-top: 60px; }
+    .introduce .section-content .excuse p {
+      margin-top: 10px; }
+    .introduce .section-content .excuse .excuse-list {
+      margin-top: 50px;
+      padding: 0 50px; }
+      .introduce .section-content .excuse .excuse-list > ul {
+        display: table;
+        width: 100%;
+        table-layout: fixed; }
+        .introduce .section-content .excuse .excuse-list > ul > li {
+          display: table-cell;
+          vertical-align: middle;
+          width: 25%;
+          float: none;
+          clear: none !important;
+          border-right: 1px solid #a3a3a3 !important;
+          border-top: 0 !important; }
+          .introduce .section-content .excuse .excuse-list > ul > li:nth-of-type(2) ~ li {
+            border-top: 0; }
+          .introduce .section-content .excuse .excuse-list > ul > li:last-child {
+            border-right: 0 !important; }
+          .introduce .section-content .excuse .excuse-list > ul > li > figure {
+            padding: 40px 0; }
+            .introduce .section-content .excuse .excuse-list > ul > li > figure img {
+              width: 118px; }
+            .introduce .section-content .excuse .excuse-list > ul > li > figure figcaption {
+              font-size: 24px;
+              line-height: 30px;
+              margin-top: 15px; }
+              .introduce .section-content .excuse .excuse-list > ul > li > figure figcaption.space {
+                padding: 15px 0; } }
+
+/* details-view */
+.details-view .form-control {
+  display: block;
+  width: 100%;
+  height: 32px;
+  padding: 0 10px;
+  border-radius: 0;
+  border: 1px solid #a3a3a3; }
+.details-view .car-details .item img {
+  display: block;
+  width: 100%; }
+.details-view .car-details .details {
+  margin-top: 30px; }
+  .details-view .car-details .details ul li dl {
+    display: table;
+    width: 100%;
+    table-layout: fixed; }
+    .details-view .car-details .details ul li dl dt, .details-view .car-details .details ul li dl dd {
+      display: table-cell;
+      vertical-align: top;
+      font-size: 12px; }
+    .details-view .car-details .details ul li dl dt {
+      width: 32px;
+      color: #444;
+      font-weight: 500;
+      text-align-last: justify; }
+    .details-view .car-details .details ul li dl dd {
+      color: #222;
+      padding-left: 25px; }
+      .details-view .car-details .details ul li dl dd span {
+        display: block;
+        color: #222;
+        text-decoration: line-through; }
+        .details-view .car-details .details ul li dl dd span i {
+          font-style: normal;
+          color: #f60000; }
+      .details-view .car-details .details ul li dl dd b {
+        display: block;
+        font-size: 16px;
+        margin-top: 5px; }
+      .details-view .car-details .details ul li dl dd small {
+        font-size: 10px;
+        display: block;
+        margin-top: 5px; }
+  .details-view .car-details .details ul li ~ li {
+    margin-top: 15px; }
+  .details-view .car-details .details .input-form {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #a3a3a3; }
+    .details-view .car-details .details .input-form ul li dl dt {
+      line-height: 32px; }
+    .details-view .car-details .details .input-form .btn-area {
+      margin-top: 10px; }
+      .details-view .car-details .details .input-form .btn-area .btn-submit {
+        display: block;
+        width: 100%;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+        line-height: 30px;
+        background-color: #f68b1e;
+        -webkit-transition-property: all;
+        transition-property: all;
+        -webkit-transition-duration: 0.15s;
+        transition-duration: 0.15s;
+        -webkit-transition-timing-function: linear;
+        transition-timing-function: linear;
+        -webkit-transition-delay: 0s;
+        transition-delay: 0s; }
+        .details-view .car-details .details .input-form .btn-area .btn-submit:hover {
+          opacity: .7; }
+      .details-view .car-details .details .input-form .btn-area .more {
+        display: inline-block;
+        font-size: 12px;
+        color: #222;
+        margin-top: 10px;
+        -webkit-transition-property: all;
+        transition-property: all;
+        -webkit-transition-duration: 0.15s;
+        transition-duration: 0.15s;
+        -webkit-transition-timing-function: linear;
+        transition-timing-function: linear;
+        -webkit-transition-delay: 0s;
+        transition-delay: 0s; }
+        .details-view .car-details .details .input-form .btn-area .more b {
+          position: relative;
+          font-weight: bold; }
+          .details-view .car-details .details .input-form .btn-area .more b:after {
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: #222;
+            -webkit-transition-property: all;
+            transition-property: all;
+            -webkit-transition-duration: 0.15s;
+            transition-duration: 0.15s;
+            -webkit-transition-timing-function: linear;
+            transition-timing-function: linear;
+            -webkit-transition-delay: 0s;
+            transition-delay: 0s; }
+        .details-view .car-details .details .input-form .btn-area .more:hover {
+          color: #f68b1e; }
+          .details-view .car-details .details .input-form .btn-area .more:hover b:after {
+            background-color: #f68b1e; }
+.details-view .summary {
+  margin-top: 30px;
+  padding: 15px 10px;
+  /*border-top: 1px solid #222;
+  border-bottom: 1px solid #222;*/
+  background-color: #ececed; }
+  .details-view .summary > dl > dt {
+    font-size: 12px;
+    color: #222;
+    font-weight: 500; }
+  .details-view .summary > dl > dd {
+    margin-top: 10px; }
+    .details-view .summary > dl > dd > ul > li {
+      position: relative;
+      font-size: 10px;
+      color: #222;
+      font-weight: 400;
+      line-height: 17px;
+      padding-left: 10px; }
+      .details-view .summary > dl > dd > ul > li:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: 'ㆍ'; }
+      .details-view .summary > dl > dd > ul > li > a {
+        display: inline;
+        color: #222; }
+@media (min-width: 1024px) {
+  .details-view .form-control {
+    height: 42px; }
+  .details-view .car-details {
+    display: table;
+    width: 100%;
+    table-layout: fixed; }
+    .details-view .car-details > div {
+      display: table-cell;
+      vertical-align: top; }
+      .details-view .car-details > div.item {
+        width: 616px; }
+      .details-view .car-details > div.details {
+        padding-left: 50px; }
+        .details-view .car-details > div.details ul li dl dt, .details-view .car-details > div.details ul li dl dd {
+          font-size: 24px; }
+        .details-view .car-details > div.details ul li dl dt {
+          width: 64px; }
+        .details-view .car-details > div.details ul li dl dd {
+          padding-left: 45px; }
+          .details-view .car-details > div.details ul li dl dd b {
+            font-size: 36px;
+            margin-top: 10px; }
+          .details-view .car-details > div.details ul li dl dd small {
+            font-size: 18px;
+            margin-top: 15px; }
+        .details-view .car-details > div.details ul li ~ li {
+          margin-top: 25px; }
+        .details-view .car-details > div.details .input-form {
+          padding-top: 35px;
+          margin-top: 35px; }
+          .details-view .car-details > div.details .input-form ul li dl dt {
+            line-height: 42px; }
+          .details-view .car-details > div.details .input-form ul li ~ li {
+            margin-top: 20px; }
+          .details-view .car-details > div.details .input-form .btn-area {
+            margin-top: 25px; }
+            .details-view .car-details > div.details .input-form .btn-area .btn-submit {
+              font-size: 32px;
+              line-height: 58px; }
+            .details-view .car-details > div.details .input-form .btn-area .more {
+              font-size: 22px;
+              margin-top: 30px; }
+  .details-view .summary {
+    margin-top: 50px;
+    padding: 35px 0 35px 200px;
+    background-image: url(/assets/images/sub/bg_car_details.png);
+    background-repeat: no-repeat;
+    background-position: -50px 50%;
+    background-size: cover; }
+    .details-view .summary > dl {
+      overflow: hidden; }
+      .details-view .summary > dl > dt {
+        float: left;
+        font-size: 37px;
+        line-height: 34px; }
+      .details-view .summary > dl > dd {
+        float: left;
+        margin-top: 0;
+        padding-left: 40px; }
+        .details-view .summary > dl > dd > ul li {
+          font-size: 20px;
+          line-height: 34px;
+          padding-left: 20px; } }
+@media (min-width: 1200px) {
+  .details-view .car-details > div.details ul li dl dd b {
+    font-size: 38px; }
+  .details-view .summary {
+    padding-left: 310px;
+    background-position: 0 50%; } }
+
+/* item */
+.item {
+  position: relative;
+  font-size: 0;
+  font-family: 'HGGGothicssi'; }
+  .item .mark {
+    position: absolute;
+    top: 0;
+    left: 4.905vw;
+    width: 21.27vw;
+    height: 21.66vw;
+    font-size: 6.22vw;
+    line-height: 6.99vw;
+    color: #fff;
+    padding-top: 2.7vw;
+    font-weight: 900;
+    text-align: center;
+    background-image: url(/assets/images/sub/img_mark.png);
+    background-position: 0 50%;
+    background-size: 100% auto;
+    background-repeat: no-repeat; }
+  .item h4 {
+    position: absolute;
+    top: 10.555vw;
+    left: 29.72vw;
+    font-size: 7.78vw;
+    color: #222;
+    font-weight: 900; }
+  .item .info {
+    position: absolute;
+    top: 26.68vw;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    display: block;
+    text-align: center; }
+    .item .info p {
+      font-size: 12.9627vw;
+      color: #ff8100; }
+      .item .info p b {
+        font-size: 31.11vw;
+        font-weight: 900;
+        letter-spacing: -5px; }
+      .item .info p small {
+        display: inline-block;
+        font-size: 7.77vw;
+        text-align: right;
+        font-weight: 300; }
+        .item .info p small span {
+          display: block;
+          color: #000;
+          font-size: 6.738vw;
+          text-decoration: line-through; }
+          .item .info p small span > i {
+            font-style: normal;
+            color: #f60000; }
+  @media (min-width: 1024px) {
+    .item .mark {
+      left: 34px;
+      width: 139px;
+      height: 128px;
+      font-size: 40px;
+      line-height: 45.9px;
+      padding-top: 10px; }
+    .item h4 {
+      top: 68px;
+      left: 194px;
+      font-size: 50px; }
+    .item .info {
+      top: 167px; }
+      .item .info p {
+        font-size: 81px; }
+        .item .info p b {
+          font-size: 200px; }
+        .item .info p small {
+          font-size: 50px; }
+          .item .info p small span {
+            font-size: 43px; } }
+
+/*# sourceMappingURL=sub.css.map */

@@ -1,0 +1,640 @@
+@import 'common';
+
+/* common */
+#content {
+    padding: 50px 0 100px;
+    @media(min-width: $md) {
+        padding: 100px 0 200px;
+    }
+}
+
+.page-path {
+    font-size: 0;
+    padding-bottom: 20px;
+    > ol {
+        > li {
+            display: inline-block;
+            vertical-align: top;
+            font-size: 10px;
+            color: #444;
+            font-weight: 400;
+            > a {
+                display: inline-block;
+                vertical-align: top;
+                color: #444;
+            }
+            &:after {
+                display: inline-block;
+                vertical-align: top;
+                content: '>';
+                margin: 0 5px;
+            }
+            &:last-child {
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+    @media(min-width: $md) {
+        padding-bottom: 40px;
+        > ol {
+            > li {
+                font-size: 16px;
+                &:after {
+                    margin: 0 10px;
+                }
+            }
+        }
+    }
+}
+
+/* introduce */
+.introduce {
+    figure {
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+    .section-content {
+        text-align: center;
+        h3 {
+            font-size: 16px;
+            color: #222;
+            line-height: 20px;
+            font-weight: bold;
+            span {
+                color: $kcolor;
+            }
+        }
+        p {
+            font-size: 12px;
+            line-height: 16px;
+            color: #444;
+        }
+        .summary {
+            padding: 25px 0 35px;
+            border-bottom: 1px solid #a3a3a3;
+            br {
+                display: none;
+                &.d-block {
+                    display: block;
+                }
+            }
+            p {
+                margin-top: 15px;
+            }
+        }
+        .excuse {
+            padding-top: 30px;
+            p {
+                margin-top: 5px;
+            }
+            .excuse-list {
+                margin-top: 25px;
+                padding: 0 25px;
+                > ul {
+                    overflow: hidden;
+                    border: 1px solid #a3a3a3;
+                    > li {
+                        float: left;
+                        width: 50%;
+                        > figure {
+                            padding: 20px 0;
+                            img {
+                                width: 59px;
+                                margin: 0 auto;
+                            }
+                            figcaption {
+                                font-size: 12px;
+                                line-height: 16px;
+                                color: $kcolor;
+                                font-weight: bold;
+                                margin-top: 10px;
+                                &.space {
+                                    padding: 8px 0;
+                                }
+                            }
+                        }
+                        &:nth-of-type(2n + 1) {
+                            clear: left;
+                            border-right: 1px solid #a3a3a3;
+                        }
+                        &:nth-of-type(2) ~ li {
+                            border-top: 1px solid #a3a3a3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media(min-width: $md) {
+        .section-content {
+            h3 {
+                font-size: 32px;
+                line-height: 40px;
+            }
+            p {
+                font-size: 24px;
+                line-height: 38px;
+            }
+            .summary {
+                padding: 55px 0 65px;
+                br {
+                    display: block;
+                }
+                p {
+                    margin-top: 30px;
+                }
+            }
+            .excuse {
+                padding-top: 60px;
+                p {
+                    margin-top: 10px;
+                }
+                .excuse-list {
+                    margin-top: 50px;
+                    padding: 0 50px;
+                    > ul {
+                        display: table;
+                        width: 100%;
+                        table-layout: fixed;
+                        > li {
+                            display: table-cell;
+                            vertical-align: middle;
+                            width: 25%;
+                            float: none;
+                            clear: none !important;
+                            border-right: 1px solid #a3a3a3 !important;
+                            border-top: 0 !important;
+                            &:nth-of-type(2) ~ li {
+                                border-top: 0;
+                            }
+                            &:last-child {
+                                border-right: 0 !important;
+                            }
+                            > figure {
+                                padding: 40px 0;
+                                img {
+                                    width: 118px;
+                                }
+                                figcaption {
+                                    font-size: 24px;
+                                    line-height: 30px;
+                                    margin-top: 15px;
+                                    &.space {
+                                        padding: 15px 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* details-view */
+.details-view {
+    .form-control {
+        display: block;
+        width: 100%;
+        height: 32px;
+        padding: 0 10px;
+        border-radius: 0;
+        border: 1px solid #a3a3a3;
+    }
+    .car-details {
+        .item {
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+        .details {
+            margin-top: 30px;
+            ul {
+                li {
+                    dl {
+                        display: table;
+                        width: 100%;
+                        table-layout: fixed;
+                        dt, dd {
+                            display: table-cell;
+                            vertical-align: top;
+                            font-size: 12px;
+                        }
+                        dt {
+                            width: 32px;
+                            color: #444;
+                            font-weight: 500;
+                            text-align-last: justify;
+                        }
+                        dd {
+                            color: #222;
+                            padding-left: 25px;
+                            span {
+                                display: block;
+                                color: #222;
+                                text-decoration: line-through;
+                                i {
+                                    font-style: normal;
+                                    color: #f60000;
+                                }
+                            }
+                            b {
+                                display: block;
+                                font-size: 16px;
+                                margin-top: 5px;
+                            }
+                            small {
+                                font-size: 10px;
+                                display: block;
+                                margin-top: 5px;
+                            }
+                        }
+                    }
+                    & ~ li {
+                        margin-top: 15px;
+                    }
+                }
+            }
+            .input-form {
+                margin-top: 20px;
+                padding-top: 20px;
+                border-top: 1px solid #a3a3a3;
+                ul {
+                    li {
+                        dl {
+                            dt {
+                                line-height: 32px;
+                            }
+                        }
+                    }
+                }
+                .btn-area {
+                    margin-top: 10px;
+                    .btn-submit {
+                        display: block;
+                        width: 100%;
+                        color: #fff;
+                        font-weight: bold;
+                        text-align: center;
+                        line-height: 30px;
+                        background-color: $kcolor;
+                        @include transition();
+                        &:hover {
+                            opacity: .7;
+                        }
+                    }
+                    .more {
+                        display: inline-block;
+                        font-size: 12px;
+                        color: #222;
+                        margin-top: 10px;
+                        @include transition();
+                        b {
+                            position: relative;
+                            font-weight: bold;
+                            &:after {
+                                position: absolute;
+                                bottom: -5px;
+                                left: 0;
+                                content: '';
+                                display: block;
+                                width: 100%;
+                                height: 1px;
+                                background-color: #222;
+                                @include transition();
+                            }
+                        }
+                        &:hover {
+                            color: $kcolor;
+                            b {
+                                &:after {
+                                    background-color: $kcolor;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .summary {
+        margin-top: 30px;
+        padding: 15px 10px;
+        /*border-top: 1px solid #222;
+        border-bottom: 1px solid #222;*/
+        background-color: #ececed;
+        > dl {
+            > dt {
+                font-size: 12px;
+                color: #222;
+                font-weight: 500;
+            }
+            > dd {
+                margin-top: 10px;
+                > ul {
+                    > li {
+                        position: relative;
+                        font-size: 10px;
+                        color: #222;
+                        font-weight: 400;
+                        line-height: 17px;
+                        padding-left: 10px;
+                        &:before {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            content: 'ㆍ';
+                        }
+                        > a {
+                            display: inline;
+                            color: #222;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media(min-width: $md) {
+        .form-control {
+            height: 42px;
+        }
+        .car-details {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+            > div {
+                display: table-cell;
+                vertical-align: top;
+                &.item {
+                    width: 616px;
+                }
+                &.details {
+                    padding-left: 50px;
+                    ul {
+                        li {
+                            dl {
+                                dt, dd {
+                                    font-size: 24px;
+                                }
+                                dt {
+                                    width: 64px;
+                                }
+                                dd {
+                                    padding-left: 45px;
+                                    b {
+                                        font-size: 36px;
+                                        margin-top: 10px;
+                                    }
+                                    small {
+                                        font-size: 18px;
+                                        margin-top: 15px;
+                                    }
+                                }
+                            }
+                            & ~ li {
+                                margin-top: 25px;
+                            }
+                        }
+                    }
+                    .input-form {
+                        padding-top: 35px;
+                        margin-top: 35px;
+                        ul {
+                            li {
+                                dl {
+                                    dt {
+                                        line-height: 42px;
+                                    }
+                                }
+                                & ~ li {
+                                    margin-top: 20px;
+                                }
+                            }
+                        }
+                        .btn-area {
+                            margin-top: 25px;
+                            .btn-submit {
+                                font-size: 32px;
+                                line-height: 58px;
+                            }
+                            .more {
+                                font-size: 22px;
+                                margin-top: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .summary {
+            margin-top: 50px;
+            padding: 35px 0 35px 200px;
+            background-image: url(/assets/images/sub/bg_car_details.png);
+            background-repeat: no-repeat;
+            background-position: -50px 50%;
+            background-size: cover;
+            > dl {
+                overflow: hidden;
+                > dt {
+                    float: left;
+                    font-size: 37px;
+                    line-height: 34px;
+                }
+                > dd {
+                    float: left;
+                    margin-top: 0;
+                    padding-left: 40px;
+                    > ul {
+                        li {
+                            font-size: 20px;
+                            line-height: 34px;
+                            padding-left: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media(min-width: 1200px) {
+        .car-details {
+            > div {
+                &.details {
+                    ul {
+                        li {
+                            dl {
+                                dd {
+                                    b {
+                                        font-size: 38px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .summary {
+            padding-left: 310px;
+            background-position: 0 50%;
+        }
+    }
+}
+
+/* item */
+.item {
+    position: relative;
+    font-size: 0;
+    @include hg();
+    .mark {
+        position: absolute;
+        top: 0;
+        left: 4.905vw;
+        width: 21.27vw;
+        height: 21.66vw;
+        font-size: 6.22vw;
+        line-height: 6.99vw;
+        color: #fff;
+        padding-top: 2.7vw;
+        font-weight: 900;
+        text-align: center;
+        background-image: url(/assets/images/sub/img_mark.png);
+        background-position: 0 50%;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+    }
+    h4 {
+        position: absolute;
+        top: 10.555vw;
+        left: 29.72vw;
+        font-size: 7.78vw;
+        color: #222;
+        font-weight: 900;
+    }
+    .info {
+        position: absolute;
+        top: 26.68vw;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        display: block;
+        text-align: center;
+        p {
+            font-size: 12.9627vw;
+            color: #ff8100;
+            b {
+                font-size: 31.11vw;
+                font-weight: 900;
+                letter-spacing: -5px;
+            }
+            small {
+                display: inline-block;
+                font-size: 7.77vw;
+                text-align: right;
+                font-weight: 300;
+                span {
+                    display: block;
+                    color: #000;
+                    font-size: 6.738vw;
+                    text-decoration: line-through;
+                    > i {
+                        font-style: normal;
+                        color: #f60000;
+                    }
+                }
+            }
+        }
+    }
+    @media(min-width: $md) {
+        .mark {
+            left: 34px;
+            width: 139px;
+            height: 128px;
+            font-size: 40px;
+            line-height: 45.9px;
+            padding-top: 10px;
+        }
+        h4 {
+            top: 68px;
+            left: 194px;
+            font-size: 50px;
+        }
+        .info {
+            top: 167px;
+            p {
+                font-size: 81px;
+                b {
+                    font-size: 200px;
+                }
+                small {
+                    font-size: 50px;
+                    span {
+                        font-size: 43px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

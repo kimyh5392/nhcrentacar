@@ -1,0 +1,897 @@
+@import 'common';
+
+/* common */
+.section-header {
+    text-align: center;
+    padding: 35px 0 15px;
+    h3 {
+        font-size: 16px;
+        color: #222;
+        font-weight: 500;
+    }
+    @media(min-width: $md) {
+        padding: 80px 0 45px;
+        h3 {
+            font-size: 40px;
+        }
+    }
+}
+
+section {
+    padding-bottom: 50px;
+    @media(min-width: $md) {
+        padding-bottom: 100px;
+    }
+}
+
+/* jumbotron */
+.jumbotron {
+    .jumbo-slider {
+        position: relative;
+        .slick-list {
+            .slick-track {
+                .slick-slide {
+                    outline: none;
+                    height: 356px;
+                    background-repeat: no-repeat;
+                    background-position: 50% 100%;
+                    background-size: cover;
+                    .container {
+                        .summary {
+                            padding: 55px 10px 0;
+                            h3 {
+                                font-size: 14px;
+                                color: #fff;
+                                font-weight: bold;
+                                line-height: 18px;
+                                text-shadow: 0px 3px 7px rgba(0, 0, 0, 0.49);
+                                span {
+                                    color: $kcolor;
+                                }
+                            }
+                            p {
+                                font-size: 12px;
+                                color: #fff;
+                                font-weight: 400;
+                                line-height: 16px;
+                                margin-top: 15px;
+                                text-shadow: 0px 3px 7px rgba(0, 0, 0, 0.49);
+                            }
+                        }
+                    }
+                    &.item-1 {
+                        background-image: url(/assets/images/main/img_jumbotron_sm.png);
+                    }
+                    &.item-2 {
+                        background-image: url(/assets/images/main/img_jumbotron_sm.png);
+                    }
+                    &.item-3 {
+                        background-image: url(/assets/images/main/img_jumbotron_sm.png);
+                    }
+                }
+            }
+        }
+        .slick-arrow {
+            position: absolute;
+            top: 50%;
+            width: 16px;
+            height: 30px;
+            display: block;
+            outline: none;
+            z-index: 1;
+            font-size: 0;
+            text-indent: -999999px;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: 16px auto;
+            transform: translateY(-50%);
+            &.slick-prev {
+                left: 10px;
+                background-image: url(/assets/images/main/btn_slick_prev.png);
+            }
+            &.slick-next {
+                right: 10px;
+                background-image: url(/assets/images/main/btn_slick_next.png);
+            }
+        }
+    }
+    @media(min-width: $md) {
+        .jumbo-slider {
+            .slick-list {
+                .slick-track {
+                    .slick-slide {
+                        height: 600px;
+                        .container {
+                            display: table;
+                            height: 100%;
+                            .summary {
+                                display: table-cell;
+                                vertical-align: middle;
+                                padding: 0;
+                                h3 {
+                                    font-size: 36px;
+                                    line-height: 46px;
+                                }
+                                p {
+                                    font-size: 28px;
+                                    line-height: 38px;
+                                    margin-top: 40px;
+                                }
+                            }
+                        }
+                        &.item-1 {
+                            background-image: url(/assets/images/main/img_jumbotron_lg.png);
+                        }
+                        &.item-2 {
+                            background-image: url(/assets/images/main/img_jumbotron_lg.png);
+                        }
+                        &.item-3 {
+                            background-image: url(/assets/images/main/img_jumbotron_lg.png);
+                        }
+                    }
+                }
+            }
+            .slick-arrow {
+                width: 50px;
+                height: 94px;
+                background-size: 50px auto;
+            }
+        }
+    }
+    @media(min-width: 1400px) {
+        .jumbo-slider {
+            .slick-arrow {
+                &.slick-prev {
+                    left: 100px;
+                }
+                &.slick-next {
+                    right: 100px;
+                }
+            }
+        }
+    }
+}
+
+/* short-rent */
+.short-rent {
+    .section-content {
+        .tab-menu {
+            > ul {
+                display: table;
+                width: 100%;
+                text-align: center;
+                table-layout: fixed;
+                border: 1px solid #a4a4a4;
+                > li {
+                    display: table-cell;
+                    vertical-align: middle;
+                    width: 1%;
+                    border-right: 1px solid #a4a4a4;
+                    > a {
+                        display: block;
+                        font-size: 10px;
+                        color: #5f5f5f;
+                        line-height: 26px;
+                        font-weight: 400;
+                        @include transition();
+                        &:hover {
+                            opacity: .7;
+                            color: #fff;
+                            background-color: #222;
+                        }
+                    }
+                    &:last-child {
+                        border-right: 0;
+                    }
+                    &.active {
+                        > a {
+                            font-weight: bold;
+                            color: #fff;
+                            background-color: #222;
+                            &:hover {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .tab-content {
+            margin-top: 15px;
+            .tab-pane {
+                visibility: hidden;
+                height: 0;
+                .visible-sm {
+                    .item-slider {
+                        position: relative;
+                        .slick-list {
+                            .slick-track {
+                                .slick-slide {
+                                    outline: none;
+                                    > a {
+                                        display: block;
+                                        @include hg();
+                                        .item {
+                                            position: relative;
+                                            > img {
+                                                width: 100%;
+                                            }
+                                            .mark {
+                                                position: absolute;
+                                                top: 0;
+                                                left: 4.905vw;
+                                                width: 21.27vw;
+                                                height: 21.66vw;
+                                                font-size: 6.22vw;
+                                                line-height: 6.99vw;
+                                                color: #fff;
+                                                padding-top: 2.7vw;
+                                                font-weight: 900;
+                                                text-align: center;
+                                                background-image: url(/assets/images/sub/img_mark.png);
+                                                background-position: 0 50%;
+                                                background-size: 100% auto;
+                                                background-repeat: no-repeat;
+                                            }
+                                            h4 {
+                                                position: absolute;
+                                                top: 10.555vw;
+                                                left: 29.72vw;
+                                                font-size: 7.78vw;
+                                                color: #222;
+                                                font-weight: 900;
+                                                &.type-2 {
+                                                    top: 2.7vw;
+                                                }
+                                            }
+                                            .info {
+                                                position: absolute;
+                                                top: 20vw;
+                                                left: 0;
+                                                width: 100%;
+                                                font-size: 0;
+                                                display: block;
+                                                text-align: center;
+                                                p {
+                                                    font-size: 11vw;
+                                                    color: #ff8100;
+                                                    letter-spacing: -1px;
+                                                    b {
+                                                        font-size: 27vw;
+                                                        font-weight: 900;
+                                                        letter-spacing: -5px;
+                                                    }
+                                                    small {
+                                                        display: inline-block;
+                                                        font-size: 6vw;
+                                                        text-align: right;
+                                                        font-weight: 300;
+                                                        span {
+                                                            display: block;
+                                                            color: #000;
+                                                            font-size: 5vw;
+                                                            text-decoration: line-through;
+                                                            > i {
+                                                                font-style: normal;
+                                                                color: #f60000;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .details {
+                                            @include noto();
+                                            padding-top: 15px;
+                                            b {
+                                                display: block;
+                                                font-size: 22px;
+                                                color: #222;
+                                                font-weight: 600;
+                                            }
+                                            p {
+                                                font-size: 18px;
+                                                color: #5f5f5f;
+                                                font-weight: 400;
+                                                margin-top: 10px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .slick-arrow {
+                            position: absolute;
+                            top: calc(50% - 32.5px);
+                            width: 16px;
+                            height: 30px;
+                            display: block;
+                            outline: none;
+                            z-index: 1;
+                            font-size: 0;
+                            text-indent: -999999px;
+                            background-repeat: no-repeat;
+                            background-position: 50% 50%;
+                            background-size: 16px auto;
+                            transform: translateY(-50%);
+                            &.slick-prev {
+                                left: 0;
+                                background-image: url(/assets/images/main/btn_slick_prev.png);
+                            }
+                            &.slick-next {
+                                right: 0;
+                                background-image: url(/assets/images/main/btn_slick_next.png);
+                            }
+                        }
+                    }
+                }
+                .visible-lg {
+                    display: none;
+                }
+                &.active {
+                    height: auto;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+    @media(min-width: $md) {
+        .section-content {
+            .tab-menu {
+                > ul {
+                    > li {
+                        > a {
+                            font-size: 28px;
+                            line-height: 68px;
+                        }
+                    }
+                }
+            }
+            .tab-content {
+                margin-top: 40px;
+                .tab-pane {
+                    .visible-sm {
+                        display: none;
+                    }
+                    .visible-lg {
+                        display: block;
+                        font-size: 0;
+                        .item-slider {
+                            position: relative;
+                            .slick-list {
+                                .slick-track {
+                                    .slick-slide {
+                                        outline: none;
+                                        > ul {
+                                            overflow: hidden;
+                                            width: calc(100% + 30px);
+                                            margin: 0 -15px;
+                                            > li {
+                                                float: left;
+                                                width: 33.33333333%;
+                                                padding: 0 15px;
+                                                &:nth-of-type(3n + 1) {
+                                                    clear: left;
+                                                }
+                                                &:nth-of-type(3) ~ li {
+                                                    margin-top: 50px;
+                                                }
+                                                > a {
+                                                    display: block;
+                                                    @include hg();
+                                                    .item {
+                                                        overflow: hidden;
+                                                        position: relative;
+                                                        img {
+                                                            width: 100%;
+                                                            @include transition();
+                                                        }
+                                                        .mark {
+                                                            position: absolute;
+                                                            top: 0;
+                                                            left: 0.9895833333333333vw;
+                                                            width: 4.270833333333333vw;
+                                                            height: 20.54794520547945vh;
+                                                            font-size: 1.25vw;
+                                                            color: #fff;
+                                                            font-weight: 900;
+                                                            padding-top: 0.5208333333333333vw;
+                                                            text-align: center;
+                                                            line-height: 1.40625vw;
+                                                            background-image: url(/assets/images/main/img_mark.png);
+                                                            background-repeat: no-repeat;
+                                                            background-position: 50% 0;
+                                                            background-size: 100% auto;
+                                                        }
+                                                        h4 {
+                                                            position: absolute;
+                                                            top: 2.083333333333333vw;
+                                                            left: 5.989583333333334vw;
+                                                            font-size: 1.5625vw;
+                                                            color: #222;
+                                                            font-weight: 900;
+                                                            &.type-2 {
+                                                                top: 0.5208333333333333vw;
+                                                            }
+                                                        }
+                                                        .info {
+                                                            position: absolute;
+                                                            top: 5.416666666666667vw;
+                                                            left: 0;
+                                                            width: 100%;
+                                                            display: block;
+                                                            text-align: center;
+                                                            font-size: 0;
+                                                            p {
+                                                                font-size: 2.604166666666667vw;
+                                                                letter-spacing: -1px;
+                                                                color: $kcolor;
+                                                                font-weight: 900;
+                                                                small {
+                                                                    display: inline-block;
+                                                                    font-size: 1.5625vw;
+                                                                    text-align: right;
+                                                                    span {
+                                                                        color: #222;
+                                                                        text-decoration: line-through;
+                                                                        font-weight: 300;
+                                                                        i {
+                                                                            font-size: 1.3541666666666667vw;
+                                                                            color: #f60000;
+                                                                            font-style: normal;
+                                                                        }
+                                                                    }
+                                                                }
+                                                                b {
+                                                                    font-size: 6.25vw;
+                                                                    font-weight: bold;
+                                                                    letter-spacing: -4px;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    .details {
+                                                        @include noto();
+                                                        padding-top: 15px;
+                                                        b {
+                                                            display: block;
+                                                            font-size: 24px;
+                                                            color: #222;
+                                                            font-weight: 600;
+                                                        }
+                                                        p {
+                                                            font-size: 20px;
+                                                            color: #5f5f5f;
+                                                            font-weight: 400;
+                                                            margin-top: 10px;
+                                                        }
+                                                    }
+                                                    &:hover {
+                                                        .item {
+                                                            img {
+                                                                transform: scale(1.1);
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .slick-arrow {
+                                display: none !important;
+                                @media(min-width: 1360px) {
+                                    position: absolute;
+                                    top: 50%;
+                                    width: 50px;
+                                    height: 94px;
+                                    z-index: 1;
+                                    text-indent: -999999999px;
+                                    background-repeat: no-repeat;
+                                    background-position: 0 0;
+                                    background-size: 50px auto;
+                                    display: block !important;
+                                    &.slick-prev {
+                                        left: -70px;
+                                        background-image: url(/assets/images/main/btn_slick_prev.png);
+                                    }
+                                    &.slick-next {
+                                        right: -70px;
+                                        background-image: url(/assets/images/main/btn_slick_next.png);
+                                    }
+                                }
+                                @media(min-width: 1400px) {
+                                    &.slick-prev {
+                                        left: -116px;
+                                    }
+                                    &.slick-next {
+                                        right: -116px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media(min-width: 1200px) {
+        .section-content {
+            .tab-content {
+                .tab-pane {
+                    .visible-lg {
+                        .item-slider {
+                            .slick-list {
+                                .slick-track {
+                                    .slick-slide {
+                                        > ul {
+                                            > li {
+                                                > a {
+                                                    .item {
+                                                        .mark {
+                                                            left: 20px;
+                                                            width: 82px;
+                                                            height: 83px;
+                                                            font-size: 24px;
+                                                            line-height: 27px;
+                                                            padding-top: 10px;
+                                                        }
+                                                        h4 {
+                                                            left: 115px;
+                                                            font-size: 30px;
+                                                            &.type-2 {
+                                                                top: 10px;
+                                                            }
+                                                        }
+                                                        .info {
+                                                            top: 85px;
+                                                            p {
+                                                                font-size: 50px;
+                                                                small {
+                                                                    font-size: 30px;
+                                                                    span {
+                                                                        i {
+                                                                            font-size: 26px;
+                                                                            
+                                                                        }
+                                                                    }
+                                                                }
+                                                                b {
+                                                                    font-size: 120px;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* process */
+.process {
+    background-color: #ebebeb;
+    .section-content {
+        overflow: hidden;
+        > ol {
+            font-size: 0;
+            text-align: center;
+            width: calc(100% + 30px);
+            margin: 0 -15px;
+            > li {
+                position: relative;
+                display: inline-block;
+                width: 33.333333333%;
+                vertical-align: top;
+                padding: 0 15px;
+                &:nth-of-type(3) ~ li {
+                    margin-top: 15px;
+                }
+                & ~ li {
+                    &:before {
+                        position: absolute;
+                        top: 0;
+                        left: -5px;
+                        content: '';
+                        width: 12px;
+                        height: 100%;
+                        background-image: url(/assets/images/main/ico_arrow.png);
+                        background-repeat: no-repeat;
+                        background-position: 50% 50%;
+                        background-size: 12px auto;
+                    }
+                }
+                > figure {
+                    display: inline-block;
+                    width: 100%;
+                    text-align: center;
+                    padding: 20px 0;
+                    border: 1px solid $kcolor;
+                    background-color: #fff;
+                    img {
+                        display: block;
+                        width: 30px;
+                        margin: 0 auto;
+                    }
+                    figcaption {
+                        font-size: 10px;
+                        color: #5f5f5f;
+                        font-weight: 400;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+    @media(min-width: $md) {
+        .container {
+            .section-content {
+                > ol {
+                    width: calc(100% + 60px);
+                    margin: 0 -30px;
+                    > li {
+                        width: 20%;
+                        padding: 0 30px;
+                        &:nth-of-type(3) ~ li {
+                            margin-top: 0;
+                        }
+                        & ~ li {
+                            &:before {
+                                left: -12px;
+                                width: 25px;
+                                background-size: 25px auto;
+                            }
+                        }
+                        > figure {
+                            padding: 30px 0 35px;
+                            img {
+                                width: 60px;
+                            }
+                            figcaption {
+                                font-size: 20px;
+                                margin-top: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* banner */
+.banner {
+    > a {
+        display: block;
+        font-size: 12px;
+        color: #fff;
+        font-weight: 400;
+        line-height: 16px;
+        padding: 20px 0;
+        text-shadow: 0px 3px 7px rgba(0, 0, 0, 0.4);
+        text-align: center;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        background-image: url(/assets/images/main/bg_banner_sm.png);
+        b {
+            color: #ff961a;
+            font-weight: bold;
+        }
+    }
+    @media(min-width: $md) {
+        > a {
+            font-size: 36px;
+            line-height: 44px;
+            padding: 60px 0;
+            background-image: url(/assets/images/main/bg_banner_lg.png);
+        }
+    }
+}
+
+
+/* estimate */
+.estimate {
+    .section-content {
+        padding: 0 30px;
+        .form-control {
+            display: block;
+            width: 100%;
+            font-size: 12px;
+            color: #5f5f5f;
+            padding: 0 10px;
+            height: 28px;
+            border-radius: 0;
+            border: 1px solid #cecece;
+            &::placeholder {
+                color: #5f5f5f;
+                opacity: 1;
+            }
+            &:-ms-input-placeholder {
+                color: #5f5f5f;
+            }
+            &::-ms-input-placeholder {
+                color: #5f5f5f;
+            }
+        }
+        textarea {
+            padding: 5px 10px !important;
+            resize: none;
+            height: 86px !important;
+        }
+        ul {
+            li {
+                dl {
+                    display: table;
+                    width: 100%;
+                    table-layout: fixed;
+                    dt, dd {
+                        display: table-cell;
+                        vertical-align: top;
+                    }
+                    dt {
+                        width: 56px;
+                        font-size: 12px;
+                        line-height: 28px;
+                        color: #222;
+                        text-align-last: justify;
+                        padding-right: 15px;
+                    }
+                    dd {
+                        
+                    }
+                }
+                & ~ li {
+                    margin-top: 15px;
+                }
+            }
+        }
+        .btn-area {
+            text-align: center;
+            margin-top: 10px;
+            .btn-submit {
+                display: block;
+                width: 100%;
+                max-width: 430px;
+                font-size: 16px;
+                color: #fff;
+                font-weight: bold;
+                line-height: 34px;
+                margin: 0 auto;
+                @include transition();
+                background-color: $kcolor;
+                &:hover {
+                    opacity: .7;
+                }
+            }
+            label {
+                display: inline-block;
+                font-size: 10px;
+                color: #5f5f5f;
+                line-height: 18px;
+                font-weight: 400;
+                margin-top: 10px;
+                input[type="checkbox"] {
+                    position: relative;
+                    top: 2.5px;
+                }
+                > a {
+                    display: inline-block;
+                    margin-left: 5px;
+                    color: #5f5f5f;
+                    border-bottom: 1px solid #5f5f5f;
+                }
+            }
+        }
+    }
+    @media(min-width: $md) {
+        .section-content {
+            padding: 0 30px;
+            .form-control {
+                font-size: 18px;
+                height: 44px;
+                padding: 0 20px;
+            }
+            textarea {
+                height: 110px !important;
+                padding: 7px 20px !important;
+            }
+            ul {
+                overflow: hidden;
+                li {
+                    float: left;
+                    width: 50%;
+                    & ~ li {
+                        margin-top: 0;
+                    }
+                    &:nth-of-type(2) ~ li {
+                        margin-top: 30px;
+                    }
+                    &:nth-of-type(2n + 1) {
+                        clear: left;
+                        padding-right: 35px;
+                    }
+                    &:nth-of-type(2n + 2) {
+                        padding-left: 35px;
+                    }
+                    &:last-child {
+                        width: 100%;
+                        padding: 0;
+                    }
+                    dl {
+                        dt {
+                            width: 90px;
+                            font-size: 20px;
+                            line-height: 44px;
+                            padding-right: 18px;
+                        }
+                    }
+                }
+            }
+            .btn-area {
+                margin-top: 35px;
+                .btn-submit {
+                    font-size: 32px;
+                    line-height: 58px;
+                }
+                label {
+                    font-size: 16px;
+                    margin-top: 20px;
+                    input[type="checkbox"] {
+                        top: 1px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
